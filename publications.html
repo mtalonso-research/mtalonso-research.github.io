@@ -2,112 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marian Temprana Alonso - Publications</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: black;
-    }
-
-    /* Navigation links (white tabs) */
-    nav a {
-      margin-right: 1em;
-      text-decoration: none;
-      color: white; /* restored to original */
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .section-title {
-      font-weight: bold;
-      font-size: 1.15rem;
-      color: black;
-      margin-top: 1em;
-      margin-bottom: 0.5em;
-    }
-    .publications ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    .publications li {
-      margin-bottom: 1.5em; /* extra spacing */
-      line-height: 1.4;
-    }
-
-    /* Black links only in publications and contact sections */
-    .publications a,
-    .contact-info a {
-      color: black;
-      text-decoration: none;
-    }
-    .publications a:hover,
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
-
 <body>
-
-<!-- Navigation Bar -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="research.html">Research</a>
-  <a href='biography.html'>Biography</a>
-  <a href="publications.html">Publications</a>
-</nav>
-
-<div class="container">
-
-  <!-- Publications Section -->
-  <section class="section publications">
-    <p class="section-title">Publications and Presentations</p>
-    <ul>
-      <li><strong>M. Temprana Alonso</strong>, X. Liu, H. Aghasi, F. Shirani, "Capacity Gains in MIMO Systems with Few-Bit ADCs Using Nonlinear Analog Circuits." Under preparation for IEEE Journal on Selected Areas in Information Theory (JSAIT), 2025. 
-      <a href="https://arxiv.org/abs/2212.05948" target="_blank">https://arxiv.org/abs/2212.05948</a>
-      </li>
-
-      <li><strong>M. Temprana Alonso</strong>, D. Luo, F. Shirani, "Deep Reinforcement Learning for MIMO Communication with Low-Resolution ADCs." Under review for IEEE Global Communications Conference (GLOBECOM), Quantum Machine Learning for Reliable Communications in Ubiquitous Intelligence of Things (QML), 2025.</li>
-
-      <li>S. Srivastava, <strong>M. Temprana Alonso</strong>, N. Askar, U. Demirhan, F. Shirani, S. Rini, A. Alkhateeb, "Deep Learning-Based Multi-Modal Sensor Fusion for CSI Compression in Wireless Networks." Proceedings of the IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN), 2025.</li>
-
-      <li>S. Srivastava, <strong>M. Temprana Alonso</strong>, R. Chatterjee, N. Askar, U. Demirhan, F. Shirani, S. Rini, A. Alkhateeb, "Deep Learning for Multi-Modal Sensor Fusion and CSI Compression in Vehicular Communications." IEEE Transactions on Vehicular Technology (TVT), 2025.</li>
-      
-      <li><strong>M. Temprana Alonso</strong>, F. Shirani, N. Irwin Bernardo, Y. C. Eldar, "Non-Linear Analog Processing Gains in Task-Based Quantization." Proceedings of the IEEE International Symposium on Information Theory (ISIT), 2024.</li>
-
-      <li><strong>M. Temprana Alonso</strong>, R. Guttromson, J. Tabarez, A. Barnes, "Causal Inference for Grid Failures During a High-Altitude Electromagnetic Pulse (HEMP)." Poster presented at the CREPES Consortium, Florida International University, 2024.</li>
-
-      <li>R. Guttromson, R. Schiek, R. Driesen, <strong>M. Temprana Alonso</strong>, T. Overbye, J. Snodgrass, A. Birchfield, M. Stevens, M. Briones, E. Nelson, A. Barnes, J. Tabarez, C. Colson, "HEMP Transmission Consequence Model (HTCM): User Manual," Sandia National Laboratories, Technical Report SAND2024-13709R, 2024.</li>
-
-      <li>R. Guttromson, R. Schiek, R. Driesen, <strong>M. Temprana Alonso</strong>, T. Overbye, J. Snodgrass, A. Birchfield, M. Stevens, M. Briones, E. Nelson, A. Barnes, J. Tabarez, C. Colson, "HEMP Transmission Consequence Model (HTCM): Technical Report," Sandia National Laboratories, Technical Report SAND2024-13708R, 2024.</li>
-
-      <li><strong>M. Temprana Alonso</strong>, F. Shirani, S. S. Iyengar, "Optimal Fault-Tolerant Data Fusion in Sensor Networks: Fundamental Limits and Efficient Algorithms." Proceedings of the IEEE Information Theory Workshop (ITW), 2023.</li>
-
-      <li><strong>M. Temprana Alonso</strong>, R. Guttromson, "Identifying Correlations Between Load Lost and Other Features Within the Power Grid in the Presence of a Large System Outage." Poster presented at the CREPES Consortium, University of Texas at El Paso (UTEP), El Paso, Texas, 2023.</li>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Marian Temprana Alonso</a>
+    <nav class="nav-links"><a href="index.html">Home</a><a href="biography.html">Biography</a><a href="research.html">Research</a><a class="active" href="publications.html">Publications</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="page-head reveal"><h1>Publications and Presentations</h1><p>Papers, reports, and posters.</p></div>
+  <section class="reveal d1" style="margin-top:2rem">
+    <ul class="pub-list">
+      <li class="pub"><span class="kind">Journal</span><br/><strong>M. Temprana Alonso</strong>, X. Liu, H. Aghasi, F. Shirani, "Capacity Gains in MIMO Systems with Few-Bit ADCs Using Nonlinear Analog Circuits." Under preparation for IEEE Journal on Selected Areas in Information Theory (JSAIT), 2025. <a href="https://arxiv.org/abs/2212.05948" target="_blank">https://arxiv.org/abs/2212.05948</a></li>
+      <li class="pub"><span class="kind">Conference</span><br/><strong>M. Temprana Alonso</strong>, D. Luo, F. Shirani, "Deep Reinforcement Learning for MIMO Communication with Low-Resolution ADCs." Under review for IEEE Global Communications Conference (GLOBECOM), Quantum Machine Learning for Reliable Communications in Ubiquitous Intelligence of Things (QML), 2025.</li>
+      <li class="pub"><span class="kind">Conference</span><br/>S. Srivastava, <strong>M. Temprana Alonso</strong>, N. Askar, U. Demirhan, F. Shirani, S. Rini, A. Alkhateeb, "Deep Learning-Based Multi-Modal Sensor Fusion for CSI Compression in Wireless Networks." Proceedings of the IEEE International Conference on Machine Learning for Communication and Networking (ICMLCN), 2025.</li>
+      <li class="pub"><span class="kind">Journal</span><br/>S. Srivastava, <strong>M. Temprana Alonso</strong>, R. Chatterjee, N. Askar, U. Demirhan, F. Shirani, S. Rini, A. Alkhateeb, "Deep Learning for Multi-Modal Sensor Fusion and CSI Compression in Vehicular Communications." IEEE Transactions on Vehicular Technology (TVT), 2025.</li>
+      <li class="pub"><span class="kind">Conference</span><br/><strong>M. Temprana Alonso</strong>, F. Shirani, N. Irwin Bernardo, Y. C. Eldar, "Non-Linear Analog Processing Gains in Task-Based Quantization." Proceedings of the IEEE International Symposium on Information Theory (ISIT), 2024.</li>
+      <li class="pub"><span class="kind">Poster</span><br/><strong>M. Temprana Alonso</strong>, R. Guttromson, J. Tabarez, A. Barnes, "Causal Inference for Grid Failures During a High-Altitude Electromagnetic Pulse (HEMP)." Poster presented at the CREPES Consortium, Florida International University, 2024.</li>
+      <li class="pub"><span class="kind">Technical report</span><br/>R. Guttromson, R. Schiek, R. Driesen, <strong>M. Temprana Alonso</strong>, T. Overbye, J. Snodgrass, A. Birchfield, M. Stevens, M. Briones, E. Nelson, A. Barnes, J. Tabarez, C. Colson, "HEMP Transmission Consequence Model (HTCM): User Manual," Sandia National Laboratories, Technical Report SAND2024-13709R, 2024.</li>
+      <li class="pub"><span class="kind">Technical report</span><br/>R. Guttromson, R. Schiek, R. Driesen, <strong>M. Temprana Alonso</strong>, T. Overbye, J. Snodgrass, A. Birchfield, M. Stevens, M. Briones, E. Nelson, A. Barnes, J. Tabarez, C. Colson, "HEMP Transmission Consequence Model (HTCM): Technical Report," Sandia National Laboratories, Technical Report SAND2024-13708R, 2024.</li>
+      <li class="pub"><span class="kind">Conference</span><br/><strong>M. Temprana Alonso</strong>, F. Shirani, S. S. Iyengar, "Optimal Fault-Tolerant Data Fusion in Sensor Networks: Fundamental Limits and Efficient Algorithms." Proceedings of the IEEE Information Theory Workshop (ITW), 2023.</li>
+      <li class="pub"><span class="kind">Poster</span><br/><strong>M. Temprana Alonso</strong>, R. Guttromson, "Identifying Correlations Between Load Lost and Other Features Within the Power Grid in the Presence of a Large System Outage." Poster presented at the CREPES Consortium, University of Texas at El Paso (UTEP), El Paso, Texas, 2023.</li>
     </ul>
   </section>
-
-  <!-- Contact Info -->
-  <section class="section contact-info">
-    <p class="section-title">Contact Information</p>
-    <ul>
-      <li>Email: <a href="mailto:m.temprana.alonso@gmail.com">m.temprana.alonso@gmail.com</a></li>
-      <li>Phone: (305) 575-9300</li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/marian-temprana-alonso-894241191" target="_blank">Marian Temprana Alonso</a></li>
-      <li>GitHub: <a href="https://github.com/mtalonso-research" target="_blank">mtalonso-research</a></li>
-    </ul>
+  <section>
+    <div class="card contact">
+      <div><h3>Get in touch</h3><p>Questions, collaborations, or just saying hello: email is the best way to reach me.</p></div>
+      <a class="btn" href="mailto:m.temprana.alonso@gmail.com"><i class="fas fa-envelope"></i> m.temprana.alonso@gmail.com</a>
+    </div>
   </section>
-
-</div>
-
-<footer>
-  <p>© 2025 Marian Temprana Alonso. All rights reserved.</p>
-</footer>
+</main>
+<footer><p>&copy; 2026 Marian Temprana Alonso. All rights reserved.</p></footer>
 
 </body>
 </html>

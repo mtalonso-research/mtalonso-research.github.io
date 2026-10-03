@@ -2,236 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marian Temprana Alonso - Research</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      color: black;
-    }
-
-    nav a {
-      margin-right: 1em;
-      text-decoration: none;
-      color: white;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .section-title {
-      font-weight: bold;
-      font-size: 1.25rem;
-      color: black;
-      margin-top: 1.5em;
-      margin-bottom: 0.75em;
-    }
-
-    .research ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    .research li {
-      margin-bottom: 2em;
-    }
-
-    .project-header {
-      display: flex;
-      align-items: center;
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-bottom: 0.4em;
-      cursor: pointer;
-    }
-
-    .project-header i {
-      font-size: 2.5rem;
-      margin-right: 0.6em;
-      color: #333;
-      flex-shrink: 0;
-    }
-
-    .details {
-      list-style-type: disc;
-      margin-left: 2em;
-    }
-    .details li {
-      margin-bottom: 0.3em;
-      line-height: 1.4;
-    }
-
-    .tag-link {
-      font-size: 0.9rem;
-      margin-left: 0.5em;
-      font-weight: normal;
-    }
-    .tag-link a {
-      text-decoration: none;
-      color: #000;
-    }
-    .tag-link a:hover {
-      text-decoration: underline;
-    }
-
-    /* Modal styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.6);
-    }
-    .modal-content {
-      background-color: #fff;
-      margin: 10% auto;
-      padding: 20px;
-      border-radius: 8px;
-      width: 70%;
-      max-width: 700px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 1.5rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .close:hover {
-      color: black;
-    }
-  </style>
 </head>
-
 <body>
-
-<!-- Navigation Bar -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="research.html">Research</a>
-  <a href="biography.html">Biography</a>
-  <a href="publications.html">Publications</a>
-</nav>
-
-<div class="container">
-
-  <!-- Research Section -->
-  <section class="section research">
-    <p class="section-title">Research Projects</p>
-
-    <!-- Project 1 -->
-    <div class="project-header" data-modal="modal1">
-      <i class="fas fa-car"></i>
-      <span>Temporal Knowledge Graphs for Reasoning and Prediction in Traffic Scenes</span>
-      <span class="tag-link">[<a href="https://github.com/mtalonso-research/Traffic_Semantic_Graphs">Git</a>]</span>
-    </div>
-    <ul class="details">
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Marian Temprana Alonso</a>
+    <nav class="nav-links"><a href="index.html">Home</a><a href="biography.html">Biography</a><a class="active" href="research.html">Research</a><a href="publications.html">Publications</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="page-head reveal"><h1>Research</h1><p>Selected research projects from my Ph.D. work in information theory, signal processing, and machine learning.</p></div>
+  <section class="reveal d1" style="margin-top:2rem">
+    <article class="project">
+      <div class="project-top" data-modal="modal1">
+        <div class="project-icon"><i class="fas fa-car"></i></div>
+        <div>
+          <h3>Temporal Knowledge Graphs for Reasoning and Prediction in Traffic Scenes</h3>
+          <div class="links" onclick="event.stopPropagation()"><a href="https://github.com/mtalonso-research/Traffic_Semantic_Graphs" target="_blank" rel="noopener">Git</a></div>
+        </div>
+      </div>
+      <ul class="details">
       <li>Collaboration with National Yang Ming Chiao Tung University and IIT Kanpur.</li>
       <li>Built a pipeline combining YOLO-based object detection and MiDas depth perception, overlaying depth heatmaps on traffic frames.</li>
       <li>Leveraged LLMs to generate propositional logic statements and encode temporal knowledge graphs.</li>
       <li>Integrated these into a Graph Neural Network (GNN) for prediction and analysis in autonomous driving.</li>
     </ul>
-    <div id="modal1" class="modal">
+      <span class="more" data-modal="modal1">Read the abstract &rarr;</span>
+      <div id="modal1" class="modal">
       <div class="modal-content">
         <span class="close" data-close="modal1">&times;</span>
         <h2>Temporal Knowledge Graphs</h2>
         <p>....</p>
       </div>
     </div>
-
-    <!-- Project 2 -->
-    <div class="project-header" data-modal="modal2">
-      <i class="fas fa-robot"></i>
-      <span>Reinforcement Learning-Based Optimization for Quantization</span>
-      <span class="tag-link">[<a href="https://arxiv.org/abs/2504.18957">Arxiv</a>] [<a href="https://github.com/mtalonso-research/RL_MIMO">Git</a>]</span>
-    </div>
-    <ul class="details">
+    </article>
+    <article class="project">
+      <div class="project-top" data-modal="modal2">
+        <div class="project-icon"><i class="fas fa-robot"></i></div>
+        <div>
+          <h3>Reinforcement Learning-Based Optimization for Quantization</h3>
+          <div class="links" onclick="event.stopPropagation()"><a href="https://arxiv.org/abs/2504.18957" target="_blank" rel="noopener">Arxiv</a><a href="https://github.com/mtalonso-research/RL_MIMO" target="_blank" rel="noopener">Git</a></div>
+        </div>
+      </div>
+      <ul class="details">
       <li>Designed an RL framework to approximate optimal quantization configurations.</li>
       <li>Extended the CORTICAL algorithm for mutual information approximation and maximization in discrete settings.</li>
       <li>Validated the framework with simulations in wireless communications and task-based quantization.</li>
     </ul>
-    <div id="modal2" class="modal">
+      <span class="more" data-modal="modal2">Read the abstract &rarr;</span>
+      <div id="modal2" class="modal">
       <div class="modal-content">
         <span class="close" data-close="modal2">&times;</span>
         <h2>Reinforcement Learning-Based Optimization</h2>
-            <img src="rl-overview.png" alt="RL Overview Figure" style="width:100%; margin: 1rem 0; border-radius:8px;">
-    <p style="text-align: justify;">
+            <img src="rl-overview.png" alt="RL Overview Figure">
+    <p>
       Multiple-input multiple-output (MIMO) wireless systems conventionally use high-resolution analog-to-digital converters (ADCs) at the receiver side to faithfully digitize received signals prior to digital signal processing. However, the power consumption of high-resolution ADCs increases significantly as the bandwidth is increased, particularly in millimeter wave communications systems. A combination of two mitigating approaches has been considered in the literature: i) to use hybrid beamforming to reduce the number of ADCs, and ii) to use low-resolution ADCs to reduce per ADC power consumption. Lowering the number and resolution of the ADCs naturally reduces the communication rate of the system, leading to a tradeoff between ADC power consumption and communication rate. Prior works have shown that optimizing over the hybrid beamforming matrix and ADC thresholds may reduce the aforementioned rate-loss significantly. A key challenge is the complexity of optimization over all choices of beamforming matrices and threshold vectors. This work proposes a reinforcement learning (RL) architecture to perform the optimization. The proposed approach integrates deep neural network-based mutual information estimators for reward calculation with policy gradient methods for reinforcement learning. The approach is robust to dynamic channel statistics and noisy CSI estimates. It is shown theoretically that greedy RL methods converge to the globally optimal policy. Extensive empirical evaluations are provided demonstrating that the performance of the proposed RL-based approach closely matches exhaustive search optimization across the solution space.
     </p>
       </div>
     </div>
-
-    <!-- Project 3 -->
-    <div class="project-header" data-modal="modal3">
-      <i class="fas fa-satellite-dish"></i>
-      <span>Deep Learning-Driven Multi-Modal Sensor Fusion for CSI Compression</span>
-      <span class="tag-link">[<a href="https://ieeexplore.ieee.org/document/11139918">ICMLCN</a>] [<a href="https://ieeexplore.ieee.org/document/11080339">TVT</a>] [<a href="https://github.com/mtalonso-research/DeepSense-6G-V2I-CSI-Compression">Git</a>]</span>
-    </div>
-    <ul class="details">
+    </article>
+    <article class="project">
+      <div class="project-top" data-modal="modal3">
+        <div class="project-icon"><i class="fas fa-satellite-dish"></i></div>
+        <div>
+          <h3>Deep Learning-Driven Multi-Modal Sensor Fusion for CSI Compression</h3>
+          <div class="links" onclick="event.stopPropagation()"><a href="https://ieeexplore.ieee.org/document/11139918" target="_blank" rel="noopener">ICMLCN</a><a href="https://ieeexplore.ieee.org/document/11080339" target="_blank" rel="noopener">TVT</a><a href="https://github.com/mtalonso-research/DeepSense-6G-V2I-CSI-Compression" target="_blank" rel="noopener">Git</a></div>
+        </div>
+      </div>
+      <ul class="details">
       <li>Collaboration with NYCU, IIT Kanpur, and Arizona State University.</li>
       <li>Proposed a system model for CSI estimation using multi-modal side information at the base station.</li>
       <li>Evaluated estimation accuracy under different modalities and compression rates using deep neural networks.</li>
     </ul>
-    <div id="modal3" class="modal">
+      <span class="more" data-modal="modal3">Read the abstract &rarr;</span>
+      <div id="modal3" class="modal">
       <div class="modal-content">
         <span class="close" data-close="modal3">&times;</span>
         <h2>Multi-Modal Sensor Fusion</h2>
-                <img src="cars.png" alt="RL Overview Figure" style="width:100%; margin: 1rem 0; border-radius:8px;">
-    <p style="text-align: justify;">
+                <img src="cars.png" alt="RL Overview Figure">
+    <p>
        Vehicle-to-infrastructure (V2I) communications requires accurate channel state information (CSI) estimation with strict latency constraints, which is  challenging in dynamic vehicular environments. This paper introduces a novel multi-modal fusion framework that leverages radar, camera, and GPS data to enhance CSI compression in V2I networks. We design a distributed deep learning architecture comprising an encoder at the vehicle, a sensor fusion network at the base station (BS), and a decoder that jointly optimizes CSI reconstruction under rate-limited feedback constraints.
       Our key innovations include: (1) systematic integration of three complementary sensing modalities, quantifying their individual and combined contributions; (2) a temporal correlation model that leverages both multi-modal data and historical CSI estimates; and (3) a comprehensive evaluation framework using our newly introduced DeepVerse 6G dataset. Extensive experiments demonstrate significant performance improvements, e.g., GPS data alone enhances CSI estimates by 67\% in static scenarios and 69\% in dynamic scenarios compared to conventional approaches. Our analysis across varying traffic densities provides valuable design guidelines for practical deployment in diverse vehicular environments.  
       </div>
     </div>
-
-    <!-- Project 4 -->
-    <div class="project-header" data-modal="modal4">
-      <i class="fas fa-wave-square"></i>
-      <span>Task-Based Quantization with Nonlinear Analog Processing</span>
-      <span class="tag-link">[<a href="https://arxiv.org/abs/2402.01525">Arxiv</a>] [<a href="https://ieeexplore.ieee.org/document/10619674">ISIT</a>]</span>
-    </div>
-    <ul class="details">
+    </article>
+    <article class="project">
+      <div class="project-top" data-modal="modal4">
+        <div class="project-icon"><i class="fas fa-wave-square"></i></div>
+        <div>
+          <h3>Task-Based Quantization with Nonlinear Analog Processing</h3>
+          <div class="links" onclick="event.stopPropagation()"><a href="https://arxiv.org/abs/2402.01525" target="_blank" rel="noopener">Arxiv</a><a href="https://ieeexplore.ieee.org/document/10619674" target="_blank" rel="noopener">ISIT</a></div>
+        </div>
+      </div>
+      <ul class="details">
       <li>Collaboration with the Weizmann Institute of Science and University of Melbourne.</li>
       <li>Investigated task-based quantization where the task differs from the observed measurements.</li>
       <li>Demonstrated that nonlinear analog processing reduces distortion and improves rate-distortion performance.</li>
     </ul>
-    <div id="modal4" class="modal">
+      <span class="more" data-modal="modal4">Read the abstract &rarr;</span>
+      <div id="modal4" class="modal">
       <div class="modal-content">
         <span class="close" data-close="modal4">&times;</span>
         <h2>Task-Based Quantization</h2>
-            <img src="task-based.png" alt="RL Overview Figure" style="width:100%; margin: 1rem 0; border-radius:8px;">
-    <p style="text-align: justify;">
+            <img src="task-based.png" alt="RL Overview Figure">
+    <p>
        In task-based quantization, a multivariate analog signal is transformed into a digital signal using a limited number of low-resolution analog-to-digital converters (ADCs). This process aims to minimize a fidelity criterion, which is assessed against an unobserved task variable that is correlated with the analog signal. The scenario models various application of interest such as channel estimation, medical imaging applications, and object localization. This work explores the integration of analog processing components—such as analog delay elements, polynomial operators, and envelope detectors—prior to ADC quantization.
        Specifically, four scenarios, involving different collections of analog processing operators are considered:  (i) arbitrary polynomial operators with analog delay elements, (ii) limited-degree polynomial operators, excluding delay elements, (iii) sequences of envelope detectors, and (iv) a combination of analog delay elements and linear combiners. For each scenario, the minimum achievable distortion is quantified through derivation of computable expressions in various statistical settings.   
        It is shown that analog processing can significantly reduce the distortion in task reconstruction. Numerical simulations in a Gaussian example are provided to give further insights into the aforementioned analog processing gains. 
     </p>
       </div>
     </div>
-
-    <!-- Project 5 -->
-    <div class="project-header" data-modal="modal5">
-      <i class="fas fa-broadcast-tower"></i>
-      <span>Energy-Efficient Wireless Communication Using Low-Resolution ADCs</span>
-      <span class="tag-link">[<a href="https://arxiv.org/abs/2212.05948">Arxiv</a>]</span>
-    </div>
-    <ul class="details">
+    </article>
+    <article class="project">
+      <div class="project-top" data-modal="modal5">
+        <div class="project-icon"><i class="fas fa-broadcast-tower"></i></div>
+        <div>
+          <h3>Energy-Efficient Wireless Communication Using Low-Resolution ADCs</h3>
+          <div class="links" onclick="event.stopPropagation()"><a href="https://arxiv.org/abs/2212.05948" target="_blank" rel="noopener">Arxiv</a></div>
+        </div>
+      </div>
+      <ul class="details">
       <li>Collaboration with University of California, Irvine.</li>
       <li>Analyzed MIMO communication rates under low-resolution ADCs for energy efficiency.</li>
       <li>Justified incorporating nonlinear operators via theoretical and numerical analysis, showing rate and efficiency gains.</li>
     </ul>
-    <div id="modal5" class="modal">
+      <span class="more" data-modal="modal5">Read the abstract &rarr;</span>
+      <div id="modal5" class="modal">
       <div class="modal-content">
         <span class="close" data-close="modal5">&times;</span>
         <h2>Energy-Efficient Wireless Communication</h2>
-            <img src="nonlinearmimo.png" alt="RL Overview Figure" style="width:100%; margin: 1rem 0; border-radius:8px;">
-    <p style="text-align: justify;">
+            <img src="nonlinearmimo.png" alt="RL Overview Figure">
+    <p>
       Analog to digital converters (ADCs) are a major contributor to the power consumption of multiple-input multiple-output (MIMO) receivers in large bandwidth millimeter-wave systems. Prior works have considered two mitigating solutions to reduce the ADC power consumption: i) decreasing the number of ADCs via analog and hybrid beamforming, and ii) decreasing the ADC resolution, i.e., utilizing one-bit and few-bit ADCs.
       These mitigating solutions lead to performance loss in terms of achievable rates due to increased quantization error. In this work, the use of nonlinear analog operators such as envelope detectors and polynomial operators, prior to sampling and quantization is considered, as a way to reduce the aforementioned rate-loss. The receiver architecture consists of linear combiners, nonlinear analog operators, and few-bit ADCs.
       The fundamental performance limits of the resulting communication system, in terms of achievable rates,  are investigated under various assumptions on the set of implementable analog operators. Extensive numerical evaluations are provided to evaluate the set of achievable rates and the power consumption of the proposed receiver architectures. Circuit simulations and measurement results, based on both 22 nm FDSOI CMOS technology and 65 nm Bulk CMOS transistor technologies, are provided to justify the power efficiency of the proposed receiver architectures.
@@ -239,74 +146,52 @@
 
       </div>
     </div>
-
-    <!-- Project 6 -->
-    <div class="project-header" data-modal="modal6">
-      <i class="fas fa-project-diagram"></i>
-      <span>Consensus-Based Sensor Fusion</span>
-      <span class="tag-link">[<a href="https://arxiv.org/abs/2210.04156">Arxiv</a>] [<a href="https://ieeexplore.ieee.org/document/10161681">ITW</a>]</span>
-    </div>
-    <ul class="details">
+    </article>
+    <article class="project">
+      <div class="project-top" data-modal="modal6">
+        <div class="project-icon"><i class="fas fa-project-diagram"></i></div>
+        <div>
+          <h3>Consensus-Based Sensor Fusion</h3>
+          <div class="links" onclick="event.stopPropagation()"><a href="https://arxiv.org/abs/2210.04156" target="_blank" rel="noopener">Arxiv</a><a href="https://ieeexplore.ieee.org/document/10161681" target="_blank" rel="noopener">ITW</a></div>
+        </div>
+      </div>
+      <ul class="details">
       <li>Studied tradeoffs between accuracy and consensus in distributed estimation.</li>
       <li>Decomposed the fusion function into orthonormal basis components in Hilbert space.</li>
       <li>Formulated optimization problems for optimal fusion algorithms.</li>
     </ul>
-    <div id="modal6" class="modal">
+      <span class="more" data-modal="modal6">Read the abstract &rarr;</span>
+      <div id="modal6" class="modal">
       <div class="modal-content">
         <span class="close" data-close="modal6">&times;</span>
         <h2>Consensus-Based Sensor Fusion</h2>
-            <img src="sensor.png" alt="RL Overview Figure" style="width:100%; margin: 1rem 0; border-radius:8px;">
-    <p style="text-align: justify;">
+            <img src="sensor.png" alt="RL Overview Figure">
+    <p>
        Distributed estimation in the context of sensor networks is considered, where distributed agents are given a set of sensor measurements, and are tasked with estimating a target variable. 
       A subset of sensors are assumed to be faulty. The objective is to minimize i) the mean squared estimation error at each node (accuracy objective), and ii) the mean squared distance between the estimates at each pair of nodes (consensus objective). It is shown that there is an inherent tradeoff between the former and latter objectives. Assuming a general stochastic model, the sensor fusion algorithm optimizing this tradeoff is characterized through a computable optimization problem, and a Cramér-Rao type lower bound for the achievable accuracy-consensus loss is obtained. Finding the optimal sensor fusion algorithm is computationally complex. To address this, a general class of low-complexity Brooks-Iyengar  Algorithms  are introduced, and their performance, in terms of accuracy and consensus objectives, is compared to that of optimal linear estimators through case study simulations of various scenarios.    </p>
 
       </div>
     </div>
-
+    </article>
   </section>
-
-  <!-- Contact Info -->
-  <section class="section contact-info">
-    <p class="section-title">Contact Information</p>
-    <ul>
-      <li>Email: <a href="mailto:m.temprana.alonso@gmail.com">m.temprana.alonso@gmail.com</a></li>
-      <li>Phone: (305) 575-9300</li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/marian-temprana-alonso-894241191" target="_blank">Marian Temprana Alonso</a></li>
-      <li>GitHub: <a href="https://github.com/mtalonso-research" target="_blank">mtalonso-research</a></li>
-    </ul>
+  <section>
+    <div class="card contact">
+      <div><h3>Get in touch</h3><p>Questions, collaborations, or just saying hello: email is the best way to reach me.</p></div>
+      <a class="btn" href="mailto:m.temprana.alonso@gmail.com"><i class="fas fa-envelope"></i> m.temprana.alonso@gmail.com</a>
+    </div>
   </section>
-
-</div>
-
-<footer>
-  <p>© 2025 Marian Temprana Alonso. All rights reserved.</p>
-</footer>
-
-<!-- Modal Script -->
+</main>
+<footer><p>&copy; 2026 Marian Temprana Alonso. All rights reserved.</p></footer>
 <script>
-  // Open modal
-  document.querySelectorAll('.project-header').forEach(header => {
-    header.addEventListener('click', () => {
-      const modalId = header.getAttribute('data-modal');
-      document.getElementById(modalId).style.display = 'block';
-    });
-  });
-
-  // Close modal
-  document.querySelectorAll('.close').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const modalId = btn.getAttribute('data-close');
-      document.getElementById(modalId).style.display = 'none';
-    });
-  });
-
-  // Close if clicking outside modal
-  window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-      event.target.style.display = "none";
-    }
-  }
+// Move pop-ups out of the cards so position:fixed covers the whole page
+document.querySelectorAll('.modal').forEach(m => document.body.appendChild(m));
+document.querySelectorAll('[data-modal]').forEach(el => {
+  el.addEventListener('click', () => { document.getElementById(el.getAttribute('data-modal')).style.display = 'block'; });
+});
+document.querySelectorAll('.close').forEach(btn => {
+  btn.addEventListener('click', () => { document.getElementById(btn.getAttribute('data-close')).style.display = 'none'; });
+});
+window.addEventListener('click', e => { if (e.target.classList.contains('modal')) e.target.style.display = 'none'; });
 </script>
-
 </body>
 </html>

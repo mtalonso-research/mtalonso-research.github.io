@@ -2,122 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Marian Temprana Alonso - Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marian Temprana Alonso - AI Software Engineer</title>
+  <meta name="description" content="Marian Temprana Alonso, AI software engineer working on LLMs and multimodal AI. Ph.D. in Computer Science." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .section-title {
-      font-weight: bold;
-      font-size: 1.15rem;
-      color: black;
-      margin-top: 1em;
-      margin-bottom: 0.5em;
-    }
-
-    .profile-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .profile-pic {
-      flex: 0 0 auto;
-    }
-
-    .profile-info {
-      flex: 1 1 0;
-    }
-  </style>
 </head>
 
 <body>
 
-<!-- Navigation Bar -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="research.html">Research</a>
-  <a href='biography.html'>Biography</a>
-  <a href="publications.html">Publications</a>
-</nav>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Marian Temprana Alonso</a>
+    <nav class="nav-links"><a class="active" href="index.html">Home</a><a href="biography.html">Biography</a><a href="research.html">Research</a><a href="publications.html">Publications</a></nav>
+  </div>
+</header>
 
-<div class="container">
+<main class="wrap">
 
-  <!-- Unified Section Box -->
-  <section class="section home" id="home">
-
-    <!-- Headshot + Bio side by side -->
-    <div class="profile-wrapper">
-      <div class="profile-pic">
-        <img src="head_shot.png" alt="Marian Temprana Alonso" />
-        <div class="icons">
-          <a href="cv.pdf" download title="Download CV"><i class="fas fa-file-alt"></i></a>
-          <a href="mailto:mtemp009@fiu.edu" title="Email"><i class="fas fa-envelope"></i></a>
-          <a href="https://github.com/mtalonso-research" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/marian-temprana-alonso-894241191" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="profile-info">
-        <h1>Marian Temprana Alonso</h1>
-
-        <div class="">
-          <p class="section-title"> </p>
-          <p>
-            Hi, I’m Marian Temprana Alonso, a graduating Ph.D. candidate from the solid Lab (Security, Optimization, and Learning for 
-            InterDependent networks) in the Knight Foundation School of Computing and Information Sciences at Florida 
-            International University. My research focuses on information theory, signal processing, and machine learning, 
-            especially for energy-efficient compression, communication, and inference.
-            I got my B.Sc. in Applied Mathematics from FIU in 2022, and since then I’ve worked on a range of projects 
-            involving task-based quantization, nonlinear analog processing in wireless systems, sensor fusion, and deep 
-            learning for multi-modal CSI compression. Some of those works has been published in IEEE conferences like ISIT 
-            and ITW, as well as jourals like TVT. I am a recipient of the GAANN fellowship, as well as a Grace Hopper Celebration 
-            Scholar and honorary member of the IEEEE IT Society S&O subcomittee.  
-            I also spent time as a year-round research intern at Sandia National Labs working on data analysis for power grid resillience.
-          </p>
-        </div>
+  <!-- Hero -->
+  <section class="hero reveal" id="home" style="margin-bottom:0">
+    <img class="hero-photo" src="head_shot.png" alt="Marian Temprana Alonso" />
+    <div>
+      <span class="eyebrow">AI Software Engineer &middot; R&amp;D</span>
+      <h1>Marian Temprana Alonso</h1>
+      <p class="tagline">
+        I build private, enterprise-grade LLM and multimodal AI systems.
+        Ph.D. in Computer Science, with a research background in machine learning and information theory.
+      </p>
+      <div class="btn-row">
+        <a class="btn primary" href="cv.pdf" download><i class="fas fa-file-alt"></i> Download CV</a>
+        <a class="btn" href="https://www.linkedin.com/in/marian-temprana-alonso-894241191" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a class="btn" href="https://github.com/mtalonso-research" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        <a class="btn" href="mailto:m.temprana.alonso@gmail.com"><i class="fas fa-envelope"></i> Email</a>
       </div>
     </div>
-
-    <!-- Honors: now truly underneath -->
-    <div class="honors">
-      <p class="section-title">Selected Honors & Awards</p>
-      <ul>
-        <li>Honorary member of IEEE IT Society Student and Outreach (S&O) subcommittee (2025)</li>
-        <li>Research Intern at Sandia National Laboratories (2023–2025)</li>
-        <li>ISIT 2023 DeepVerse 6G Machine Learning Challenge Winning Team (2023)</li>
-        <li>Recepient of a GAAN Fellowship (2023)</li>
-        <li>Grace Hopper Celebration Scholar (2023)</li>
-        <li>Student Academic Achievement & Service Award (2022)</li>
-      </ul>
-    </div>
-
   </section>
 
-<section class="section contact-info">
-  <p class="section-title">Contact Information</p>
-  <ul>
-    <li>Email: <a href="mailto:m.temprana.alonso@gmail.com">m.temprana.alonso@gmail.com</a></li>
-    <li>Phone: (305) 575-9300</li>
-    <li>LinkedIn: <a href="https://www.linkedin.com/in/marian-temprana-alonso-894241191" target="_blank">Marian Temprana Alonso</a></li>
-    <li>GitHub: <a href="https://github.com/mtalonso-research" target="_blank">mtalonso-research</a></li>
-  </ul>
-</section>
+  <!-- Current role -->
+  <section class="reveal d1" style="margin-top:2rem">
+    <div class="card now">
+      <div>
+        <div class="label">Currently &middot; Feb 2026 &ndash; Present</div>
+        <h3>AI Software Engineer, R&amp;D Group &mdash; United Data Technologies</h3>
+        <div class="tags">
+          <span class="tag">LLM fine-tuning</span>
+          <span class="tag">Retrieval</span>
+          <span class="tag">Agentic systems</span>
+          <span class="tag">Safety guardrails</span>
+          <span class="tag">Image &amp; video generation</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<style>
-  .contact-info a {
-    color: inherit;
-    text-decoration: none;
-  }
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-</style>
+  <!-- About -->
+  <section class="reveal d2">
+    <div class="section-head"><h2>About</h2></div>
+    <div class="card about">
+      <p>
+        Hi, I’m Marian. At United Data Technologies I build components of a private enterprise AI platform
+        that lets organizations run large language models and multimodal AI on their own data and infrastructure.
+      </p>
+      <p>
+        I also hold a Ph.D. in Computer Science from Florida International University, where I was part of the solid Lab
+        (Security, Optimization, and Learning for InterDependent networks) at the Knight Foundation School of
+        Computing and Information Sciences. My research focused on information theory, signal processing, and machine
+        learning for energy-efficient compression, communication, and inference, including task-based quantization,
+        nonlinear analog processing in wireless systems, sensor fusion, and deep learning for multi-modal CSI
+        compression, published at IEEE venues such as ISIT and ITW and in IEEE Transactions on Vehicular Technology.
+        I spent two years as a research intern at Sandia National Laboratories, analyzing large-scale power grid
+        simulation data. I am a recipient of the GAANN fellowship, a Grace Hopper Celebration Scholar, and an honorary
+        member of the IEEE Information Theory Society Student and Outreach (S&amp;O) subcommittee.
+      </p>
+    </div>
+  </section>
 
-</div>
+  <!-- (Personal projects section will go here) -->
+
+  <!-- Honors -->
+  <section class="reveal d3">
+    <div class="section-head"><h2>Honors &amp; Awards</h2></div>
+    <div class="honors-grid">
+      <div class="honor"><span class="year">2025</span><span class="text">Honorary member of IEEE IT Society Student and Outreach (S&amp;O) subcommittee</span></div>
+      <div class="honor"><span class="year">2024</span><span class="text">ISIT Travel Grant</span></div>
+      <div class="honor"><span class="year">2023</span><span class="text">ISIT DeepVerse 6G Machine Learning Challenge, winning team</span></div>
+      <div class="honor"><span class="year">2023</span><span class="text">GAANN Fellowship</span></div>
+      <div class="honor"><span class="year">2023</span><span class="text">Grace Hopper Celebration Scholar</span></div>
+      <div class="honor"><span class="year">2022</span><span class="text">Phi Beta Kappa Honor Society Member</span></div>
+      <div class="honor"><span class="year">2022</span><span class="text">Student Academic Achievement &amp; Service Award</span></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <div class="card contact">
+      <div>
+        <h3>Get in touch</h3>
+        <p>Questions, collaborations, or just saying hello: email is the best way to reach me.</p>
+      </div>
+      <a class="btn" href="mailto:m.temprana.alonso@gmail.com"><i class="fas fa-envelope"></i> m.temprana.alonso@gmail.com</a>
+    </div>
+  </section>
+
+</main>
 
 <footer>
-  <p>© 2025 Marian Temprana Alonso. All rights reserved.</p>
+  <p>&copy; 2026 Marian Temprana Alonso. All rights reserved.</p>
 </footer>
 
 </body>

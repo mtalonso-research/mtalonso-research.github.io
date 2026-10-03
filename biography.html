@@ -2,124 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marian Temprana Alonso - Biography</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .section-title {
-      font-weight: bold;
-      font-size: 1.15rem;
-      color: black;
-      margin-top: 1em;
-      margin-bottom: 0.5em;
-    }
-    .bio-page ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    .bio-page li {
-      margin-bottom: 0.75em;
-      line-height: 1.4;
-    }
-  </style>
 </head>
-
 <body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Marian Temprana Alonso</a>
+    <nav class="nav-links"><a href="index.html">Home</a><a class="active" href="biography.html">Biography</a><a href="research.html">Research</a><a href="publications.html">Publications</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="page-head reveal"><h1>Biography</h1><p>Background, education, and experience.</p></div>
+  <section class="reveal d1" style="margin-top:2rem">
+    <div class="section-head"><h2>Bio</h2></div>
+    <div class="card about">
+      <p>
+        Marian Temprana Alonso is an AI software engineer in the R&amp;D group at United Data Technologies, where she
+        builds components of a private enterprise AI platform that lets organizations run large language models and
+        multimodal AI on their own data and infrastructure. Her work spans LLM fine-tuning, retrieval, agentic systems,
+        safety guardrails, and image and video generation.
+      </p>
+      <p>
+        She holds a Ph.D. in Computer Science from Florida International University, where she was part of the Security,
+        Optimization, and Learning for InterDependent networks laboratory (solid lab) in the Knight Foundation School of
+        Computing and Information Sciences, working under the supervision of Dr. M. Hadi Amini and Dr. Farhad Shirani. Her
+        research focused on information theory, signal processing, and machine learning, with an emphasis on
+        energy-efficient compression, communications, and sensing. Her projects covered task-based quantization, wireless
+        communications with nonlinear analog processing, accuracy and consensus-based sensor fusion, and deep
+        learning-driven multi-modal sensor fusion for CSI compression, leading to publications at IEEE venues such as ISIT
+        and ITW and in IEEE Transactions on Vehicular Technology. Her recognitions include a Graduate Assistance in Areas
+        of National Need (GAANN) Fellowship and being part of the winning team for the ISIT 2023 DeepVerse 6G Machine
+        Learning Challenge. She also spent two years as a research intern at Sandia National Laboratories, applying data
+        analytics and predictive modeling to power grid resilience.
+      </p>
+    </div>
 
-<!-- Navigation Bar -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="research.html">Research</a>
-  <a href='biography.html'>Biography</a>
-  <a href="publications.html">Publications</a>
-</nav>
+    <div class="section-head" style="margin-top:2.5rem"><h2>Experience</h2></div>
+    <div class="card"><ul class="timeline">
+      <li>
+        <strong>AI Software Engineer, R&amp;D Group</strong>, United Data Technologies (Feb 2026 &ndash; Present)<br/>
+        <span class="muted">Building components of a private enterprise AI platform for LLM and multimodal AI: fine-tuning, retrieval, agents, guardrails, and generative media.</span>
+      </li>
+      <li>
+        <strong>Graduate Research Assistant</strong>, Florida International University (Aug 2022 &ndash; Dec 2025)<br/>
+        <span class="muted">Research in machine learning, optimization, and information theory for sensing and communication systems, with collaborators at multiple institutions.</span>
+      </li>
+      <li>
+        <strong>Research Intern</strong>, Sandia National Laboratories (May 2023 &ndash; Jul 2025)<br/>
+        <span class="muted">Analyzed large-scale power grid simulations and built predictive models for grid resilience, in collaboration with Los Alamos National Laboratory.</span>
+      </li>
+      <li>
+        <strong>Graduate Teaching Assistant</strong>, Florida International University (2022 &ndash; 2023)
+        <ul>
+          <li>COT 3510: Applied Linear Structures for Computing.</li>
+          <li>COT 3100: Discrete Structures.</li>
+        </ul>
+      </li>
+    </ul></div>
 
-<div class="container bio-page">
+    <div class="section-head" style="margin-top:2.5rem"><h2>Education</h2></div>
+    <div class="card"><ul class="timeline">
+      <li>
+        <strong>Ph.D. in Computer Science</strong>, Florida International University (Dec 2025)<br/>
+        <strong>Advisors:</strong> Farhad Shirani and M. Hadi Amini<br/>
+        <strong>Dissertation:</strong> <em>An Information-Theoretic Framework for Energy-Efficient Communication, Compression, and Inference</em>
+      </li>
+      <li><strong>M.Sc. in Computer Science</strong>, Florida International University (May 2025)</li>
+      <li><strong>B.Sc. in Applied Mathematics</strong>, Florida International University (May 2022)</li>
+    </ul></div>
 
-  <!-- Unified Biography Section -->
-  <section class="section">
-
-    <p class="section-title">Bio</p>
-    <p>
-      Marian Temprana Alonso is a graduating Ph.D. candidate at the Security, Optimization, and Learning for InterDependent networks 
-      laboratory (solid lab), Knight Foundation School of Computing and Information Sciences at Florida International University, 
-      working under the supervision of Dr. M. Hadi Amini. Her research interests include information theory, signal processing, and 
-      machine learning, with a focus on energy-efficient compression, communications, and sensing. She earned her B.Sc. in Applied 
-      Mathematics from Florida International University in 2022. Throughout her Ph.D., she has contributed to projects on energy-efficient 
-      task-based quantization, wireless communications with nonlinear analog processing, accuracy and consensus-based sensor fusion, 
-      and deep learning-driven multi-modal sensor fusion for CSI compression, leading to publications in IEEE conferences such as ISIT 
-      and ITW. She has received several prestigious recognitions during her Ph.D. Her achievements include receiving a Graduate Assistance 
-      in Areas of National Need (GAANN) Fellowship and being part of the winning team for the ISIT 2023 DeepVerse 6G Machine Learning 
-      Challenge. She contributed as a research intern at Sandia National Laboratories, where she worked on advancing methodologies for 
-      power grid resilience.
-    </p>
-
-    <p class="section-title">Selected Honors & Awards</p>
-      <ul>
-        <li>Honorary member of IEEE IT Society Student and Outreach (S&O) subcommittee (2025)</li>
-        <li>Research Intern at Sandia National Laboratories (2023–2025)</li>
-        <li>ISIT 2023 DeepVerse 6G Machine Learning Challenge Winning Team (2023)</li>
-        <li>Recepient of a GAAN Fellowship (2023)</li>
-        <li>Grace Hopper Celebration Scholar (2023)</li>
-        <li>Student Academic Achievement & Service Award (2022)</li>
-      </ul>
-
-    <p class="section-title">Education</p>
-      <ul>
-        <li><strong>Ph.D. in Computer Science</strong>, Florida International University (Dec 2025)<br/>
-          <strong>Advisors:</strong> Farhad Shirani and M. Hadi Amini<br/>
-          <strong>Dissertation:</strong> <em>An Information-Theoretic Framework for Energy-Efficient Communication, Compression, and Inference</em>
-        </li>
-        <li><strong>M.Sc. in Computer Science</strong>, Florida International University (en route)</li>
-        <li><strong>B.Sc. in Applied Mathematics</strong>, Florida International University (May 2022)</li>
-      </ul>
-
-    <p class="section-title">Experience</p>
-      <ul>
-        <li>
-          <strong>Graduate Research Assistant</strong>, Florida International University (2022 – 2025)<br/>
-        </li>
-        <li>
-          <strong>Research Intern</strong>, Sandia National Laboratories (2023 – 2025)<br/>
-        </li>
-        <li>
-          <strong>Graduate Teaching Assistant</strong>, Florida International University (2022 – 2023)<br/>
-          <ul>
-            <li>COT 3510: Applied Linear Structures for Computing.</li>
-            <li>COT 3100: Discrete Structures.</li>
-          </ul>
-        </li>
-      </ul>
-
+    <div class="section-head" style="margin-top:2.5rem"><h2>Honors &amp; Awards</h2></div>
+    <div class="honors-grid">
+      <div class="honor"><span class="year">2025</span><span class="text">Honorary member of IEEE IT Society Student and Outreach (S&amp;O) subcommittee</span></div>
+      <div class="honor"><span class="year">2024</span><span class="text">ISIT Travel Grant</span></div>
+      <div class="honor"><span class="year">2023</span><span class="text">ISIT DeepVerse 6G Machine Learning Challenge, winning team</span></div>
+      <div class="honor"><span class="year">2023</span><span class="text">GAANN Fellowship</span></div>
+      <div class="honor"><span class="year">2023</span><span class="text">Grace Hopper Celebration Scholar</span></div>
+      <div class="honor"><span class="year">2022</span><span class="text">Phi Beta Kappa Honor Society Member</span></div>
+      <div class="honor"><span class="year">2022</span><span class="text">Student Academic Achievement &amp; Service Award</span></div>
+    </div>
   </section>
-
-<section class="section contact-info">
-  <p class="section-title">Contact Information</p>
-  <ul>
-    <li>Email: <a href="mailto:m.temprana.alonso@gmail.com">m.temprana.alonso@gmail.com</a></li>
-    <li>Phone: (305) 575-9300</li>
-    <li>LinkedIn: <a href="https://www.linkedin.com/in/marian-temprana-alonso-894241191" target="_blank">Marian Temprana Alonso</a></li>
-    <li>GitHub: <a href="https://github.com/mtalonso-research" target="_blank">mtalonso-research</a></li>
-  </ul>
-</section>
-
-<style>
-  .contact-info a {
-    color: inherit;
-    text-decoration: none;
-  }
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-</style>
-
-</div>
-
-<footer>
-  <p>© 2025 Marian Temprana Alonso. All rights reserved.</p>
-</footer>
+  <section>
+    <div class="card contact">
+      <div><h3>Get in touch</h3><p>Questions, collaborations, or just saying hello: email is the best way to reach me.</p></div>
+      <a class="btn" href="mailto:m.temprana.alonso@gmail.com"><i class="fas fa-envelope"></i> m.temprana.alonso@gmail.com</a>
+    </div>
+  </section>
+</main>
+<footer><p>&copy; 2026 Marian Temprana Alonso. All rights reserved.</p></footer>
 
 </body>
 </html>
