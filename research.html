@@ -7,42 +7,59 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
 <body>
 <header class="nav">
   <div class="nav-inner">
     <a class="brand" href="index.html">Marian Temprana Alonso</a>
-    <nav class="nav-links"><a href="index.html">Home</a><a href="biography.html">Biography</a><a class="active" href="research.html">Research</a><a href="publications.html">Publications</a></nav>
+    <nav class="nav-links"><a href="index.html">Home</a><a href="biography.html">Biography</a><a href="projects.html">Projects</a><a class="active" href="research.html">Research</a><a href="publications.html">Publications</a></nav>
   </div>
 </header>
 <main class="wrap">
   <div class="page-head reveal"><h1>Research</h1><p>Selected research projects from my Ph.D. work in information theory, signal processing, and machine learning.</p></div>
   <section class="reveal d1" style="margin-top:2rem">
-    <article class="project">
-      <div class="project-top" data-modal="modal1">
+    <article class="project featured">
+      <div class="project-top" style="cursor:default">
         <div class="project-icon"><i class="fas fa-car"></i></div>
         <div>
           <h3>Temporal Knowledge Graphs for Reasoning and Prediction in Traffic Scenes</h3>
           <div class="links" onclick="event.stopPropagation()"><a href="https://github.com/mtalonso-research/Traffic_Semantic_Graphs" target="_blank" rel="noopener">Git</a></div>
         </div>
       </div>
+      <p class="lead">
+        Autonomous vehicles have to judge risk from imperfect data. This work represents each driving scene as a temporal graph of vehicles, pedestrians, and environment, then learns a shared embedding space so a risk predictor trained on clean data keeps working when observations are noisy.
+      </p>
+      <div class="shots fit">
+        <figure style="--ar:3.24"><a href="img/research/fig-tsg.png" target="_blank" rel="noopener"><img src="img/research/fig-tsg.png" alt="Framework overview: traffic scene graphs built from driving scenes, aligned in a shared embedding space, then used for risk prediction" loading="lazy"></a><figcaption><strong>Framework.</strong> Scenes become traffic scene graphs; graph encoders and a shared projection head align clean and noisy observations, and one risk predictor serves both.</figcaption></figure>
+      </div>
       <ul class="details">
-      <li>Collaboration with National Yang Ming Chiao Tung University and IIT Kanpur.</li>
-      <li>Built a pipeline combining YOLO-based object detection and MiDas depth perception, overlaying depth heatmaps on traffic frames.</li>
-      <li>Leveraged LLMs to generate propositional logic statements and encode temporal knowledge graphs.</li>
-      <li>Integrated these into a Graph Neural Network (GNN) for prediction and analysis in autonomous driving.</li>
-    </ul>
+        <li>Collaboration with National Yang Ming Chiao Tung University and IIT Kanpur.</li>
+        <li>Represents each driving scene as a temporal Traffic Scene Graph of the ego vehicle, surrounding vehicles, pedestrians, and environment, built on the nuScenes knowledge graph with ego-centric coordinate normalization.</li>
+        <li>Uses heterogeneous Graph Neural Network encoders and a shared projection head to map clean and noisy scene graphs into one embedding space, aligned with a small set of anchor episodes, so a single risk predictor serves both.</li>
+        <li>Built 24,002 scene graphs (about 4.2 million nodes) from the nuPlan dataset, with risk labels derived from time-to-collision, post-encroachment time, and deceleration rate.</li>
+        <li>Under noisy observations the approach reached 40&ndash;42% four-level risk accuracy, against 39% for a model trained on clean data only and 34&ndash;38% for one trained on noisy data only. In a cross-city study, performance rose with the number of labeled anchors (Boston Macro F1 from 0.19 without adaptation to 0.42 with 50% anchors).</li>
+      </ul>
+      <!-- Earlier bullets, not covered by the paper; restore if they describe the repo:
+        Built a pipeline combining YOLO-based object detection and MiDas depth perception, overlaying depth heatmaps on traffic frames.
+        Leveraged LLMs to generate propositional logic statements and encode temporal knowledge graphs.
+      -->
+      <div class="tags">
+        <span class="tag">Graph Neural Networks</span><span class="tag">Knowledge Graphs</span><span class="tag">Transfer Learning</span><span class="tag">Domain Adaptation</span><span class="tag">Autonomous Driving</span><span class="tag">nuPlan</span>
+      </div>
+      <span class="more" style="cursor:default;color:var(--ink-soft)">Abstract coming soon</span>
+      <!-- Paper not yet published. Restore this pop-up (and data-modal="modal1" on .project-top) when it is:
       <span class="more" data-modal="modal1">Read the abstract &rarr;</span>
       <div id="modal1" class="modal">
-      <div class="modal-content">
-        <span class="close" data-close="modal1">&times;</span>
-        <h2>Temporal Knowledge Graphs</h2>
-        <p>....</p>
+        <div class="modal-content">
+          <span class="close" data-close="modal1">&times;</span>
+          <h2>Temporal Knowledge Graphs</h2>
+          <p>(abstract goes here once the paper is published)</p>
+        </div>
       </div>
-    </div>
+      -->
     </article>
-    <article class="project">
+    <article class="project featured">
       <div class="project-top" data-modal="modal2">
         <div class="project-icon"><i class="fas fa-robot"></i></div>
         <div>
@@ -50,24 +67,33 @@
           <div class="links" onclick="event.stopPropagation()"><a href="https://arxiv.org/abs/2504.18957" target="_blank" rel="noopener">Arxiv</a><a href="https://github.com/mtalonso-research/RL_MIMO" target="_blank" rel="noopener">Git</a></div>
         </div>
       </div>
+      <p class="lead">
+        A reinforcement learning approach for jointly choosing the beamforming matrix, ADC thresholds, and input constellation in low-resolution mm-wave MIMO receivers, with performance close to brute-force search where that search is feasible.
+      </p>
+      <div class="shots fit">
+        <figure style="--ar:2.87"><a href="img/research/fig-rl.png" target="_blank" rel="noopener"><img src="img/research/fig-rl.png" alt="Overview of the reinforcement learning framework for quantization" loading="lazy"></a></figure>
+      </div>
       <ul class="details">
-      <li>Designed an RL framework to approximate optimal quantization configurations.</li>
-      <li>Extended the CORTICAL algorithm for mutual information approximation and maximization in discrete settings.</li>
-      <li>Validated the framework with simulations in wireless communications and task-based quantization.</li>
-    </ul>
+        <li>Formulated the joint optimization of beamforming matrices and ADC thresholds as a reinforcement learning problem that maximizes achievable rate under a power constraint.</li>
+        <li>Combined policy gradient methods with a neural mutual information estimator (CORTICAL) for the reward, trained alongside the policy; a Blahut-Arimoto variant gave lower-variance results.</li>
+        <li>Proved that greedy RL methods converge to the globally optimal policy under mild assumptions.</li>
+        <li>Simulated SISO and MIMO systems: policies closely matched brute-force optimization, clearly outperformed QAM and PSK constellations in MIMO, and stayed robust to noisy CSI estimates and time-varying channels.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Reinforcement Learning</span><span class="tag">Policy Gradient</span><span class="tag">Mutual Information</span><span class="tag">MIMO</span><span class="tag">Quantization</span>
+      </div>
       <span class="more" data-modal="modal2">Read the abstract &rarr;</span>
       <div id="modal2" class="modal">
       <div class="modal-content">
         <span class="close" data-close="modal2">&times;</span>
         <h2>Reinforcement Learning-Based Optimization</h2>
-            <img src="rl-overview.png" alt="RL Overview Figure">
     <p>
       Multiple-input multiple-output (MIMO) wireless systems conventionally use high-resolution analog-to-digital converters (ADCs) at the receiver side to faithfully digitize received signals prior to digital signal processing. However, the power consumption of high-resolution ADCs increases significantly as the bandwidth is increased, particularly in millimeter wave communications systems. A combination of two mitigating approaches has been considered in the literature: i) to use hybrid beamforming to reduce the number of ADCs, and ii) to use low-resolution ADCs to reduce per ADC power consumption. Lowering the number and resolution of the ADCs naturally reduces the communication rate of the system, leading to a tradeoff between ADC power consumption and communication rate. Prior works have shown that optimizing over the hybrid beamforming matrix and ADC thresholds may reduce the aforementioned rate-loss significantly. A key challenge is the complexity of optimization over all choices of beamforming matrices and threshold vectors. This work proposes a reinforcement learning (RL) architecture to perform the optimization. The proposed approach integrates deep neural network-based mutual information estimators for reward calculation with policy gradient methods for reinforcement learning. The approach is robust to dynamic channel statistics and noisy CSI estimates. It is shown theoretically that greedy RL methods converge to the globally optimal policy. Extensive empirical evaluations are provided demonstrating that the performance of the proposed RL-based approach closely matches exhaustive search optimization across the solution space.
     </p>
       </div>
     </div>
     </article>
-    <article class="project">
+    <article class="project featured">
       <div class="project-top" data-modal="modal3">
         <div class="project-icon"><i class="fas fa-satellite-dish"></i></div>
         <div>
@@ -75,24 +101,37 @@
           <div class="links" onclick="event.stopPropagation()"><a href="https://ieeexplore.ieee.org/document/11139918" target="_blank" rel="noopener">ICMLCN</a><a href="https://ieeexplore.ieee.org/document/11080339" target="_blank" rel="noopener">TVT</a><a href="https://github.com/mtalonso-research/DeepSense-6G-V2I-CSI-Compression" target="_blank" rel="noopener">Git</a></div>
         </div>
       </div>
-      <ul class="details">
-      <li>Collaboration with NYCU, IIT Kanpur, and Arizona State University.</li>
-      <li>Proposed a system model for CSI estimation using multi-modal side information at the base station.</li>
-      <li>Evaluated estimation accuracy under different modalities and compression rates using deep neural networks.</li>
-    </ul>
+      <div class="project-split">
+        <div class="project-text">
+        <p class="lead">
+          Vehicle-to-infrastructure links need accurate channel state information under strict latency limits. This work fuses radar, camera, and GPS at the base station to compress the feedback the vehicle has to send.
+        </p>
+        <ul class="details">
+        <li>Collaboration with NYCU, IIT Kanpur, and Arizona State University.</li>
+        <li>Proposed a system model for CSI estimation in which a base station refines the vehicle's compressed CSI using radar, camera, and GPS side information, with a distributed network of a vehicle encoder, a sensor fusion network, and a base-station decoder.</li>
+        <li>Introduced the DeepVerse 6G dataset and evaluated five CSI compression architectures (CSINet, CSINetPlus, CRNet, ACRNet, TransNet) across sensing modalities, compression budgets, and temporal correlation.</li>
+        <li>Showed that GPS data alone improves CSI accuracy by up to 69% in dynamic scenarios; camera and GPS help even without a control channel, while radar helps only alongside extra side information.</li>
+      </ul>
+        <div class="tags">
+          <span class="tag">Deep Learning</span><span class="tag">Sensor Fusion</span><span class="tag">V2I</span><span class="tag">CSI Compression</span><span class="tag">DeepVerse 6G</span>
+        </div>
+        </div>
+        <div class="shots fit side">
+          <figure style="--ar:0.80;--fig-h:340px"><a href="img/research/fig-cars.png" target="_blank" rel="noopener"><img src="img/research/fig-cars.png" alt="V2I scenario with vehicles and a base station used for CSI compression" loading="lazy"></a></figure>
+        </div>
+      </div>
       <span class="more" data-modal="modal3">Read the abstract &rarr;</span>
       <div id="modal3" class="modal">
       <div class="modal-content">
         <span class="close" data-close="modal3">&times;</span>
         <h2>Multi-Modal Sensor Fusion</h2>
-                <img src="cars.png" alt="RL Overview Figure">
     <p>
        Vehicle-to-infrastructure (V2I) communications requires accurate channel state information (CSI) estimation with strict latency constraints, which is  challenging in dynamic vehicular environments. This paper introduces a novel multi-modal fusion framework that leverages radar, camera, and GPS data to enhance CSI compression in V2I networks. We design a distributed deep learning architecture comprising an encoder at the vehicle, a sensor fusion network at the base station (BS), and a decoder that jointly optimizes CSI reconstruction under rate-limited feedback constraints.
       Our key innovations include: (1) systematic integration of three complementary sensing modalities, quantifying their individual and combined contributions; (2) a temporal correlation model that leverages both multi-modal data and historical CSI estimates; and (3) a comprehensive evaluation framework using our newly introduced DeepVerse 6G dataset. Extensive experiments demonstrate significant performance improvements, e.g., GPS data alone enhances CSI estimates by 67\% in static scenarios and 69\% in dynamic scenarios compared to conventional approaches. Our analysis across varying traffic densities provides valuable design guidelines for practical deployment in diverse vehicular environments.  
       </div>
     </div>
     </article>
-    <article class="project">
+    <article class="project featured">
       <div class="project-top" data-modal="modal4">
         <div class="project-icon"><i class="fas fa-wave-square"></i></div>
         <div>
@@ -100,17 +139,26 @@
           <div class="links" onclick="event.stopPropagation()"><a href="https://arxiv.org/abs/2402.01525" target="_blank" rel="noopener">Arxiv</a><a href="https://ieeexplore.ieee.org/document/10619674" target="_blank" rel="noopener">ISIT</a></div>
         </div>
       </div>
+      <p class="lead">
+        When the quantity you care about is not the one you measure, where should the analog processing go? This work shows how nonlinear analog operators ahead of the ADCs reduce task distortion for the same bit budget.
+      </p>
+      <div class="shots fit">
+        <figure style="--ar:3.50"><a href="img/research/fig-task.png" target="_blank" rel="noopener"><img src="img/research/fig-task.png" alt="Task-based quantization system with analog processing before the ADCs" loading="lazy"></a></figure>
+      </div>
       <ul class="details">
-      <li>Collaboration with the Weizmann Institute of Science and University of Melbourne.</li>
-      <li>Investigated task-based quantization where the task differs from the observed measurements.</li>
-      <li>Demonstrated that nonlinear analog processing reduces distortion and improves rate-distortion performance.</li>
-    </ul>
+        <li>Collaboration with the Weizmann Institute of Science and University of Melbourne.</li>
+        <li>Investigated task-based quantization, where the quantity to recover is a task variable correlated with, but different from, the observed analog signal.</li>
+        <li>Analyzed four classes of analog processing before the ADCs: polynomial operators with delay elements, limited-degree polynomials, sequences of envelope detectors, and delay elements with linear combiners.</li>
+        <li>Derived computable expressions for the minimum achievable distortion in each case, and showed with a Gaussian example that nonlinear analog processing significantly reduces task distortion.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Task-Based Quantization</span><span class="tag">Analog Processing</span><span class="tag">Low-Resolution ADCs</span><span class="tag">Nonlinear Operators</span><span class="tag">Information Theory</span>
+      </div>
       <span class="more" data-modal="modal4">Read the abstract &rarr;</span>
       <div id="modal4" class="modal">
       <div class="modal-content">
         <span class="close" data-close="modal4">&times;</span>
         <h2>Task-Based Quantization</h2>
-            <img src="task-based.png" alt="RL Overview Figure">
     <p>
        In task-based quantization, a multivariate analog signal is transformed into a digital signal using a limited number of low-resolution analog-to-digital converters (ADCs). This process aims to minimize a fidelity criterion, which is assessed against an unobserved task variable that is correlated with the analog signal. The scenario models various application of interest such as channel estimation, medical imaging applications, and object localization. This work explores the integration of analog processing components—such as analog delay elements, polynomial operators, and envelope detectors—prior to ADC quantization.
        Specifically, four scenarios, involving different collections of analog processing operators are considered:  (i) arbitrary polynomial operators with analog delay elements, (ii) limited-degree polynomial operators, excluding delay elements, (iii) sequences of envelope detectors, and (iv) a combination of analog delay elements and linear combiners. For each scenario, the minimum achievable distortion is quantified through derivation of computable expressions in various statistical settings.   
@@ -119,7 +167,7 @@
       </div>
     </div>
     </article>
-    <article class="project">
+    <article class="project featured">
       <div class="project-top" data-modal="modal5">
         <div class="project-icon"><i class="fas fa-broadcast-tower"></i></div>
         <div>
@@ -127,17 +175,26 @@
           <div class="links" onclick="event.stopPropagation()"><a href="https://arxiv.org/abs/2212.05948" target="_blank" rel="noopener">Arxiv</a></div>
         </div>
       </div>
+      <p class="lead">
+        Analog-to-digital converters dominate receiver power in millimeter-wave MIMO. This work adds nonlinear analog operators before few-bit ADCs to recover achievable rate, backed by circuit simulations in two CMOS technologies.
+      </p>
+      <div class="shots fit">
+        <figure style="--ar:1.86"><a href="img/research/fig-energy.png" target="_blank" rel="noopener"><img src="img/research/fig-energy.png" alt="Receiver architecture with nonlinear analog operators and few-bit ADCs" loading="lazy"></a></figure>
+      </div>
       <ul class="details">
-      <li>Collaboration with University of California, Irvine.</li>
-      <li>Analyzed MIMO communication rates under low-resolution ADCs for energy efficiency.</li>
-      <li>Justified incorporating nonlinear operators via theoretical and numerical analysis, showing rate and efficiency gains.</li>
-    </ul>
+        <li>Collaboration with University of California, Irvine.</li>
+        <li>Introduced a receiver architecture of linear combiners, nonlinear analog operators (envelope detectors and polynomial operators), and few-bit ADCs, and identified a "curse of low dimensions" that limits conventional beamforming with coarse quantization.</li>
+        <li>Characterized channel capacity under analog beamforming with envelope detectors and with polynomial operators, and derived achievable rates in terms of the ADC power budget.</li>
+        <li>Backed the rate gains with circuit designs and simulations in 22 nm FDSOI and 65 nm bulk CMOS, for polynomials up to degree four and pairs of concatenated envelope detectors, to evaluate the rate-power tradeoff.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">MIMO</span><span class="tag">Low-Resolution ADCs</span><span class="tag">Nonlinear Analog Processing</span><span class="tag">Millimeter Wave</span><span class="tag">Circuit Simulation</span>
+      </div>
       <span class="more" data-modal="modal5">Read the abstract &rarr;</span>
       <div id="modal5" class="modal">
       <div class="modal-content">
         <span class="close" data-close="modal5">&times;</span>
         <h2>Energy-Efficient Wireless Communication</h2>
-            <img src="nonlinearmimo.png" alt="RL Overview Figure">
     <p>
       Analog to digital converters (ADCs) are a major contributor to the power consumption of multiple-input multiple-output (MIMO) receivers in large bandwidth millimeter-wave systems. Prior works have considered two mitigating solutions to reduce the ADC power consumption: i) decreasing the number of ADCs via analog and hybrid beamforming, and ii) decreasing the ADC resolution, i.e., utilizing one-bit and few-bit ADCs.
       These mitigating solutions lead to performance loss in terms of achievable rates due to increased quantization error. In this work, the use of nonlinear analog operators such as envelope detectors and polynomial operators, prior to sampling and quantization is considered, as a way to reduce the aforementioned rate-loss. The receiver architecture consists of linear combiners, nonlinear analog operators, and few-bit ADCs.
@@ -147,7 +204,7 @@
       </div>
     </div>
     </article>
-    <article class="project">
+    <article class="project featured">
       <div class="project-top" data-modal="modal6">
         <div class="project-icon"><i class="fas fa-project-diagram"></i></div>
         <div>
@@ -155,17 +212,30 @@
           <div class="links" onclick="event.stopPropagation()"><a href="https://arxiv.org/abs/2210.04156" target="_blank" rel="noopener">Arxiv</a><a href="https://ieeexplore.ieee.org/document/10161681" target="_blank" rel="noopener">ITW</a></div>
         </div>
       </div>
-      <ul class="details">
-      <li>Studied tradeoffs between accuracy and consensus in distributed estimation.</li>
-      <li>Decomposed the fusion function into orthonormal basis components in Hilbert space.</li>
-      <li>Formulated optimization problems for optimal fusion algorithms.</li>
-    </ul>
+      <div class="project-split">
+        <div class="project-text">
+        <p class="lead">
+          Sensor networks with faulty nodes face a tradeoff between each node being accurate and all nodes agreeing. This work characterizes the optimal fusion for that tradeoff and studies low-complexity Brooks-Iyengar-style algorithms against it.
+        </p>
+        <ul class="details">
+        <li>Showed an inherent tradeoff between accuracy (mean square error at each node) and consensus (distance between nodes' estimates) when a subset of sensors is faulty.</li>
+        <li>Decomposed the fusion function over an orthonormal basis of a Hilbert space and characterized the optimal fusion algorithm through a computable convex optimization problem.</li>
+        <li>Derived a Cram&eacute;r-Rao type lower bound on the achievable accuracy-consensus loss.</li>
+        <li>Introduced generalized Brooks-Iyengar algorithms and compared them with optimal linear fusion, Marzullo's, and the original Brooks-Iyengar algorithm in simulations.</li>
+      </ul>
+        <div class="tags">
+          <span class="tag">Distributed Estimation</span><span class="tag">Sensor Networks</span><span class="tag">Fault Tolerance</span><span class="tag">Hilbert Spaces</span><span class="tag">Brooks-Iyengar</span>
+        </div>
+        </div>
+        <div class="shots fit side">
+          <figure style="--ar:1.24"><a href="img/research/fig-sensor.png" target="_blank" rel="noopener"><img src="img/research/fig-sensor.png" alt="Sensor network used in the consensus-based fusion study" loading="lazy"></a></figure>
+        </div>
+      </div>
       <span class="more" data-modal="modal6">Read the abstract &rarr;</span>
       <div id="modal6" class="modal">
       <div class="modal-content">
         <span class="close" data-close="modal6">&times;</span>
         <h2>Consensus-Based Sensor Fusion</h2>
-            <img src="sensor.png" alt="RL Overview Figure">
     <p>
        Distributed estimation in the context of sensor networks is considered, where distributed agents are given a set of sensor measurements, and are tasked with estimating a target variable. 
       A subset of sensors are assumed to be faulty. The objective is to minimize i) the mean squared estimation error at each node (accuracy objective), and ii) the mean squared distance between the estimates at each pair of nodes (consensus objective). It is shown that there is an inherent tradeoff between the former and latter objectives. Assuming a general stochastic model, the sensor fusion algorithm optimizing this tradeoff is characterized through a computable optimization problem, and a Cramér-Rao type lower bound for the achievable accuracy-consensus loss is obtained. Finding the optimal sensor fusion algorithm is computationally complex. To address this, a general class of low-complexity Brooks-Iyengar  Algorithms  are introduced, and their performance, in terms of accuracy and consensus objectives, is compared to that of optimal linear estimators through case study simulations of various scenarios.    </p>

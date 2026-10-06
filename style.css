@@ -376,3 +376,31 @@ footer {
 .news-item p { margin: .3rem 0 0; }
 
 .muted { color: var(--ink-soft); font-size: .95rem; }
+
+/* Projects */
+.project.featured { border-left: 5px solid var(--green-600); }
+.project .lead { margin: 1rem 0 .25rem; color: var(--ink); }
+.project .tags { margin-top: 1rem; }
+.chip {
+  font-size: .78rem; font-weight: 600;
+  color: #fff; background: var(--green-600);
+  padding: .15rem .65rem; border-radius: 999px;
+}
+.chip.soft { color: var(--ink-soft); background: var(--green-50); border: 1px dashed var(--line); }
+
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; margin: 1.25rem 0 .5rem; }
+.shots figure { margin: 0; }
+.shots img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); display: block; box-shadow: var(--shadow); transition: transform .2s; }
+.shots a:hover img { transform: translateY(-3px); }
+.shots figcaption { font-size: .8rem; color: var(--ink-soft); margin-top: .45rem; line-height: 1.4; }
+
+/* Research tiles with a tall figure: text on the left, figure on the right */
+.project-split { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.75rem; align-items: start; }
+.project-split .shots { margin: 1.25rem 0 0; grid-template-columns: 1fr; }
+@media (max-width: 760px) { .project-split { grid-template-columns: 1fr; } }
+
+/* Research figures: trimmed to their content and shown at one common height, so the diagrams look equally sized */
+.shots.fit { --fig-h: 230px; display: block; }
+.shots.fit figure { width: min(100%, calc(var(--ar) * var(--fig-h))); }
+.project-split .shots.fit { display: block; }
+.project-split .shots.fit figure { width: calc(var(--ar) * var(--fig-h)); max-width: 100%; }

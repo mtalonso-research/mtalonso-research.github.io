@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marian Temprana Alonso - Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Marian Temprana Alonso</a>
+    <nav class="nav-links"><a href="index.html">Home</a><a href="biography.html">Biography</a><a class="active" href="projects.html">Projects</a><a href="research.html">Research</a><a href="publications.html">Publications</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="page-head reveal"><h1>Projects</h1><p>Software I build on my own time: tools and apps, from idea to packaged product.</p></div>
+  <section class="reveal d1" style="margin-top:2rem">
+    <article class="project featured">
+      <div class="project-top">
+        <div class="project-icon"><i class="fas fa-book-open"></i></div>
+        <div>
+          <h3>Book Reader: translate, narrate, and summarize your books</h3>
+          <div class="links">
+            <span class="chip">v1.0 &middot; macOS (Apple Silicon)</span>
+          </div>
+        </div>
+      </div>
+      <p class="lead">
+        A local-first desktop app that turns PDFs, EPUBs, and Word documents into translated text, summaries,
+        and audiobook-style narration. Everything runs on your own machine, so your documents never leave it.
+      </p>
+      <div class="shots">
+        <figure><a href="img/book-reader/reading.jpg" target="_blank" rel="noopener"><img src="img/book-reader/reading.jpg" alt="Chapter list and the original English text of The Selfish Giant" loading="lazy"></a><figcaption><strong>Original.</strong> Chapters are detected automatically, with word counts.</figcaption></figure>
+        <figure><a href="img/book-reader/translation.jpg" target="_blank" rel="noopener"><img src="img/book-reader/translation.jpg" alt="The Selfish Giant translated into Spanish" loading="lazy"></a><figcaption><strong>Spanish.</strong> Translated on-device with a local model (Gemma 3 via Ollama).</figcaption></figure>
+      </div>
+      <p class="muted" style="font-size:.8rem;margin:.25rem 0 0">Sample text: <em>The Happy Prince and Other Tales</em> by Oscar Wilde, public domain, via <a href="https://www.gutenberg.org/ebooks/902" target="_blank" rel="noopener">Project Gutenberg</a>.</p>
+      <ul class="details">
+        <li><strong>Chapter-aware reading.</strong> Imports PDF, DOCX, EPUB, TXT, and Markdown and detects chapters and sections, so you can work one chapter at a time.</li>
+        <li><strong>Translation with local LLMs.</strong> Runs models through Ollama, with a glossary for consistent terminology and automatic quality checks that catch bad outputs and retry them.</li>
+        <li><strong>Narration.</strong> Neural text-to-speech with downloadable voices, plus an optional higher-quality voice engine installed on demand. Narrate in the background and export to MP3.</li>
+        <li><strong>Built as a real product.</strong> Background job queue, per-user data storage, an English and Spanish interface, automated tests, and a packaged macOS app.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">TypeScript</span>
+        <span class="tag">Electron</span><span class="tag">SQLite</span><span class="tag">Ollama</span><span class="tag">Local LLMs</span><span class="tag">Text-to-speech</span>
+      </div>
+    </article>
+    <article class="project featured" style="margin-top:1.5rem">
+      <div class="project-top">
+        <div class="project-icon"><i class="fas fa-utensils"></i></div>
+        <div>
+          <h3>Meal Planner: plan your week, build your grocery list</h3>
+          <div class="links">
+            <span class="chip">v1.0 &middot; macOS (Apple Silicon)</span>
+          </div>
+        </div>
+      </div>
+      <p class="lead">
+        A local-first desktop app that plans a week of meals from your own recipe library, balances them against
+        your goals, and turns the plan into a grocery list. Recipes and plans stay on your machine, and the AI
+        features run on a local model.
+      </p>
+      <div class="shots">
+        <figure><a href="img/meal-planner/week.jpg" target="_blank" rel="noopener"><img src="img/meal-planner/week.jpg" alt="Weekly meal plan with breakfast, lunch, snack, and dinner for five days, with calories and protein per day" loading="lazy"></a><figcaption><strong>Week.</strong> A planned week, with calories and protein per day and prep-time tags on each meal.</figcaption></figure>
+        <figure><a href="img/meal-planner/grocery.jpg" target="_blank" rel="noopener"><img src="img/meal-planner/grocery.jpg" alt="Grocery list for the week grouped by aisle, with checkboxes" loading="lazy"></a><figcaption><strong>Groceries.</strong> One list for the whole week, grouped by aisle, ready to copy, save, or scan to your phone.</figcaption></figure>
+      </div>
+      <p class="muted" style="font-size:.8rem;margin:.25rem 0 0">Screenshots use the app's built-in sample recipes.</p>
+      <ul class="details">
+        <li><strong>Weekly planner.</strong> A 5- or 7-day grid of breakfast, lunch, snack, and dinner. Lock the meals you like and auto-fill the rest, with limits on prep time, required tags, and how soon a recipe can repeat.</li>
+        <li><strong>Goals and nutrition.</strong> Balanced, high-protein, or low-carb planning against a daily calorie target, with per-recipe macros. Dishes can be set as complete meals, mains, or sides, and paired into main + side meals.</li>
+        <li><strong>Recipes from anywhere.</strong> Add recipes by hand, import them from a web link (structured recipe data first, with a local model as fallback), or generate them with a local LLM through Ollama.</li>
+        <li><strong>Grocery list and pantry.</strong> Combines ingredients across the week by aisle, exports as a checklist, text file, or QR code for your phone, and suggests recipes you can make from what is already in the pantry.</li>
+        <li><strong>Built as a real product.</strong> Typed end to end, validated recipe data, a local SQLite database, light and dark themes, automated tests, and a packaged macOS app.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Electron</span><span class="tag">SQLite</span>
+        <span class="tag">Zustand</span><span class="tag">Tailwind CSS</span><span class="tag">Ollama</span><span class="tag">Local LLMs</span>
+      </div>
+    </article>
+  </section>
+  <section>
+    <div class="card contact">
+      <div><h3>Get in touch</h3><p>Questions, collaborations, or just saying hello: email is the best way to reach me.</p></div>
+      <a class="btn" href="mailto:m.temprana.alonso@gmail.com"><i class="fas fa-envelope"></i> m.temprana.alonso@gmail.com</a>
+    </div>
+  </section>
+</main>
+<footer><p>&copy; 2026 Marian Temprana Alonso. All rights reserved.</p></footer>
+
+</body>
+</html>
